@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 4. Lottie 动画加载 (Lottie Animation) ---
     const lottieAbout = document.getElementById('lottie-about');
     if (lottieAbout) {
-        console.log('Attempting to load Lottie animation...');
+        console.log('Attempting to load Lottie animation with animationData...');
         
         // 确保 lottie 对象存在
         const lottieLib = window.lottie || window.bodymovin;

@@ -64,10 +64,16 @@ a {
 .text-center-mobile { text-align: left; }
 
 .tiny-text {
-    font-size: 0.45rem; /* 极致缩小，对应参考图底部 */
+    font-size: 0.55rem; /* 从 0.45rem 稍微变大到 0.55rem */
     line-height: 1.4;
     font-weight: 500;
     letter-spacing: 0.05em; /* 增加字间距 */
+}
+
+/* 底部闪烁图标 */
+.icon-spark {
+    width: 20px; /* 从 16px 稍微变大到 20px */
+    height: 20px;
 }
 
 /* Flex Utilities */
@@ -267,9 +273,9 @@ a {
     position: relative;
     width: 100%;
     /* 取消 auto 的垂直居中，改为使用具体的 margin 将其向上提 */
-    margin-top: 4vh; /* 离上方标题近一点 */
+    margin-top: 2vh; /* 进一步减小顶部间距，向上移动 */
     margin-bottom: auto; /* 让下方自动填充剩余空间，从而将整体往上推 */
-    padding: 3vh 0; 
+    padding: 2vh 0; /* 减小内边距，使整体更紧凑并上移 */
     flex-shrink: 0;
 }
 
@@ -381,6 +387,7 @@ a {
     align-items: flex-end;
     gap: 4vw;
     flex-shrink: 0;
+    margin-top: -4vh; /* 增加负边距，使底部区域整体向上移动 */
     padding-bottom: 2vh; 
     padding: 0 4vw; /* 配合导航栏的内缩 */
 }
@@ -391,6 +398,7 @@ a {
 .center-col {
     align-items: center; /* 确保中间列在水平方向上居中 */
     text-align: center;
+    transform: translateX(4rem); /* 再次显著向右移动 */
 }
 .center-col .line-wrap {
     width: 100%;
@@ -418,21 +426,23 @@ a {
 
 .illustration-box {
     margin-bottom: 1.5rem;
-    width: 250px; 
-    height: 167px; 
-    min-width: 200px; 
-    min-height: 133px;
+    width: 400px; /* 从 320px 进一步增大到 400px */
+    height: 267px; /* 保持 1.5:1 比例 (400 / 1.5 = 266.6) */
+    min-width: 300px; 
+    min-height: 200px;
     max-width: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 1; /* 暂时强制显示，先解决加载问题 */
+    opacity: 1; 
     transition: opacity 0.5s ease;
+    transform: translateX(-1.5rem); /* 将动效图片单独向左移动一点 */
 }
 .illustration-box svg {
-    width: 100% !important;
-    height: auto !important;
+    width: 100%;
+    height: 100%;
 }
+
 
 /* =========================================
    8. Mobile Responsive
