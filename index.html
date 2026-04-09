@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[你的名字] — Independent Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- 将 Lottie 库移至头部以确保加载优先 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body class="loading">
+
+    <div class="loader"></div>
+
+    <div id="scroll-container">
+        <section class="hero-new" id="home">
+            
+            <!-- 顶部三列 -->
+            <div class="hero-top-bar">
+                <div class="top-left">
+                    <div class="line-wrap">
+                        <div class="line-inner">
+                            <!-- 彻底解决上下排版问题：使用单独的容器将 SVG 和 P 标签包裹，强制左右并排 -->
+                            <div class="top-left-group">
+                                <svg class="icon-asterisk spin-slow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                    <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+                                </svg>
+                                <p class="small-regular-text">Open for any<br>collaborations and offers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="top-center">
+                    <div class="line-wrap">
+                        <div class="line-inner">
+                            <span class="logo-text uppercase">JEFFML&copy;</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="top-right">
+                    <div class="line-wrap">
+                        <div class="line-inner">
+                            <p class="folio-text">Folio<br>Vol.1 —</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 居中巨型标题组合 -->
+            <div class="hero-main-title">
+                <div class="line-wrap">
+                    <h1 class="flex-title line-inner">
+                        <span class="name-first serif">Jeff</span>
+                        <span class="name-dot">·</span>
+                        <span class="name-last">Guan</span>
+                        <sup class="name-sup">(ML)</sup>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- 带有悬停黑带遮罩动效的横向导航栏区域 -->
+            <div class="hero-nav-wrapper">
+                
+                <!-- 基础导航 (白色背景层上的文字) -->
+                <div class="hero-nav-bar">
+                    <a href="works.html" class="nav-item hover-trigger" data-hover-text="Works">
+                        <div class="line-wrap"><div class="line-inner"><span class="nav-num">01</span><span class="nav-label">Works</span></div></div>
+                    </a>
+                    <a href="about.html" class="nav-item hover-trigger" data-hover-text="About">
+                        <div class="line-wrap"><div class="line-inner"><span class="nav-num">02</span><span class="nav-label">About</span></div></div>
+                    </a>
+                    <a href="playground.html" class="nav-item hover-trigger" data-hover-text="Playground">
+                        <div class="line-wrap"><div class="line-inner"><span class="nav-num">03</span><span class="nav-label">Playground</span></div></div>
+                    </a>
+                    <a href="contact.html" class="nav-item hover-trigger" data-hover-text="Contact">
+                        <div class="line-wrap"><div class="line-inner"><span class="nav-num">04</span><span class="nav-label">Contact</span></div></div>
+                    </a>
+                    <div class="nav-year">
+                        <div class="line-wrap"><div class="line-inner">&copy;2026</div></div>
+                    </div>
+                </div>
+
+                <!-- 悬停黑带遮罩层 (Hover Reveal Layer) -->
+                <div class="nav-hover-layer" id="navHoverLayer">
+                    <!-- 动态滚动的巨型文字跑马灯 -->
+                    <div class="marquee-wrapper">
+                        <div class="marquee-content" id="marqueeText">
+                            <!-- JS 会动态注入内容 -->
+                        </div>
+                    </div>
+
+                    <!-- 遮罩层内部的白色导航文字 (对齐基础导航，反色效果) -->
+                    <div class="hero-nav-bar layer-nav-bar">
+                        <a href="works.html" class="nav-item">
+                            <span class="nav-num">01</span><span class="nav-label">Works</span>
+                        </a>
+                        <a href="about.html" class="nav-item">
+                            <span class="nav-num">02</span><span class="nav-label">About</span>
+                        </a>
+                        <a href="playground.html" class="nav-item">
+                            <span class="nav-num">03</span><span class="nav-label">Playground</span>
+                        </a>
+                        <a href="contact.html" class="nav-item">
+                            <span class="nav-num">04</span><span class="nav-label">Contact</span>
+                        </a>
+                        <div class="nav-year">
+                            &copy;2026
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 底部三列 (插图与描述) -->
+            <div class="hero-bottom-area">
+                <div class="bottom-col left-col">
+                    <div class="line-wrap">
+                        <div class="line-inner flex-col">
+                            <svg class="icon-spark pulse-slow" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z"/>
+                            </svg>
+                            <p class="tiny-text uppercase tracking-wide text-center-mobile">
+                                [姓名] (HE/HIM) AKA [昵称] IS AN<br>
+                                INDEPENDENT DESIGNER FROM [城市],<br>
+                                [国家]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-col center-col">
+                    <div class="line-wrap">
+                        <div class="line-inner flex-col align-center">
+                            <div class="illustration-box" id="lottie-about"></div>
+                            <p class="tiny-text">Just an ordinary designer. From [国家] with love.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-col right-col">
+                    <div class="line-wrap">
+                        <div class="line-inner flex-col">
+                            <svg class="icon-spark pulse-slow" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z"/>
+                            </svg>
+                            <p class="tiny-text uppercase tracking-wide text-center-mobile">
+                                PASSIONATE ABOUT CREATING<br>
+                                UNFORGETTABLE AND BEAUTIFUL DIGITAL<br>
+                                EXPERIENCES.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="lottie-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
