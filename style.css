@@ -404,6 +404,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: visible; /* 允许内部动效图片向左偏移而不被切断 */
 }
 .bottom-col p {
     max-width: 300px; /* 放宽段落最大宽度 */
@@ -436,7 +437,7 @@ a {
     justify-content: center;
     opacity: 1; 
     transition: opacity 0.5s ease;
-    transform: translateX(-1.5rem); /* 将动效图片单独向左移动一点 */
+    transform: translateX(-3rem); /* 进一步向左移动，原为 -1.5rem */
 }
 .illustration-box svg {
     width: 100%;
